@@ -393,14 +393,94 @@ main p {
 /* Footer one */
 
 footer {
-  background-color: #333;
+  background-color: #5A5A5A;
   grid-column: 1 / 15;
   color: #C9C9C9;
 }
 
-.poweredBy {
-  grid-column: 1 / 5;
+/* Messages section */
+
+.messages {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1em;
+  font-size: 0.75em;
+  padding: 0 1em 2em 1em;
+  background-color: #8B8B8B;
 }
+
+.clientTimeline {
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+  padding: 1em;
+}
+
+.clientBody {
+  padding: 1em;
+  background-color: #8B8B8B;
+  text-align: left;
+  padding: 0.5em;
+}
+
+/* Client Timeline */
+
+.clientBody h3 {
+  text-align: left;
+  color: #C9C9C9;
+}
+
+.clientBody a {
+  color: #fff;
+}
+
+.clientBody p {
+  color: #333;
+  font-size: 15px;
+}
+
+/* Blog Timeline */
+
+.blogTimeline {
+  grid-column: 6 / 10;
+  grid-row: 1 / 3;
+  padding: 1em;
+}
+
+.blogBody {
+  padding: 1em;
+  background-color: #8B8B8B;
+  text-align: left;
+}
+
+.blogBody h3 {
+  text-align: left;
+  color: #C9C9C9;
+}
+
+.blogBody a {
+  color: #fff;
+}
+
+.blogBody p {
+  color: #333;
+  font-size: 15px;
+}
+
+/* Twitter */
+
+.twitter {
+  grid-column: 11 / 15;
+  grid-row: 1 / 3;
+  padding: 1em;
+}
+
+.twitter-timeline {
+  padding: 1em;
+  background-color: #8B8B8B;
+}
+
+/* Powered By Section */
 
 .powered {
   display: grid;
@@ -408,49 +488,46 @@ footer {
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 1em;
   font-size: 0.75em;
-  padding: 1em;
+  padding: 0 1em 1em 0 1em;
+  background-color: #333;
 }
 
 .powered i {
-  padding: 1em 0 0 0;
+  padding: 2em 0 0 0;
   font-size: 2em;
+}
+
+.poweredBy {
+  grid-column: 4 / 10;
+  padding: 4em 0 0 0;
+}
+
+.poweredBy a {
+  color: #fff;
 }
 
 .tile1 {
   padding: 1em;
-  grid-column: 1 / 2;
+  grid-column: 5 / 6;
   grid-row: 2 / 3;
 }
 
 .tile2 {
   padding: 1em;
-  grid-column: 2 / 3;
+  grid-column: 6 / 7;
   grid-row: 2 / 3;
 }
 
 .tile3 {
   padding: 1em;
-  grid-column: 3 / 4;
+  grid-column: 7 / 8;
   grid-row: 2 / 3;
 }
 
 .tile4 {
   padding: 1em;
-  grid-column: 4 / 5;
+  grid-column: 8 / 9;
   grid-row: 2 / 3;
-}
-
-.twitter {
-  grid-column: -1 / -5;
-  grid-row: 1 / 3;
-  padding: 1em;
-}
-
-.twitter-timeline {
-  grid-column: -1 / -5;
-  grid-row: 1 / 3;
-  padding: 1em;
-  background-color: #5A5A5A;
 }
 
 /* Footer two */
@@ -458,6 +535,7 @@ footer {
 .copy {
   display: grid;
   grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: 1fr;
   background-color: #5A5A5A;
   font-size: 1em;
 }
@@ -478,7 +556,7 @@ footer {
   padding: 1em;
 }
 
-#twitter {
+#twitter2 {
   grid-column: -4 / -5;
   grid-row: 1 / 2;
   padding: 1em;
@@ -504,30 +582,83 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
+
   .navTiles {
     grid-column: 1 / 9;
     grid-row: 4 / 8;
   }
+
   .welcomeTile {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     opacity: 0.8;
   }
+
   .contactTile {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     opacity: 0.8;
   }
+
   .aboutTile {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     opacity: 0.8;
   }
+
   .blogTile {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     opacity: 0.8;
   }
+
+  .clientTimeline {
+    grid-column: 1 / 5;
+    grid-row: 1 / 3;
+    padding: 1em 0 0 0;
+  }
+
+  .blogTimeline {
+    grid-column: 6 / 10;
+    grid-row: 1 / 3;
+    padding: 1em 0 0 0;
+  }
+
+  .twitter {
+    grid-column: 11 / 15;
+    grid-row: 1 / 3;
+    padding: 1em 0 1em 0;
+  }
+
+    #copyright {
+      grid-column: 1 / 7;
+      text-align: left;
+      padding: 0 0 0 1em;
+    }
+
+    #instagram {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      padding: 0 0 1em 0;
+    }
+
+    #twitter2 {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+      padding: 0 0 1em 0;
+    }
+
+    #linkedin {
+      grid-column: 4 / 5;
+      grid-row: 2 / 3;
+      padding: 0 0 1em 0;
+    }
+
+    #facebook {
+      grid-column: 5 / 6;
+      grid-row: 2 / 3;
+      padding: 0 0 1em 0;
+    }
 }
 
 /* media query for nav styles */
@@ -538,6 +669,7 @@ footer {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(64, 56px);
   }
+
   /* Background Image */
   .background-image {
     grid-column: 1 / 15;
@@ -552,6 +684,7 @@ footer {
     animation-duration: 2s;
     z-index: -1;
   }
+
   .background-image2 {
     grid-column: 1 / 15;
     grid-row: 45 / 55;
@@ -565,18 +698,23 @@ footer {
     animation-duration: 2s;
     z-index: -1;
   }
+
   /* Logo */
+
   .logo {
     grid-column: 1 / 8;
     grid-row: 1 / 2;
     padding: 0 0 0 10px;
   }
+
   /* Title Message */
+
   .titleMessage {
     grid-column: 2 / 8;
     grid-row: 5 / 18;
     z-index: 2;
   }
+
   .messageBody {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -586,35 +724,45 @@ footer {
     height: 700px;
     overflow-y: scroll;
   }
+
   .titleMessage h1, h3 {
     grid-column: 1 / 5;
     text-align: center;
     color: #fff;
     padding: 5px;
   }
+
   .titleMessage p {
     grid-column: 1 / 5;
     grid-row: padding: 5px;
     color: #fff;
     text-align: center;
   }
+
   /* Navigation Tiles */
+
   .navTiles {
     display: none;
   }
+
   .welcomeTile {
     display: none;
   }
+
   .aboutTile {
     display: none;
   }
+
   .portfolioTile {
     display: none;
   }
+
   .contactTile {
     display: none;
   }
+
   /* Main */
+
   main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -623,97 +771,149 @@ footer {
     background-color: #333;
     z-index: 0;
   }
+
   main h1, p, i {
     padding: 1em 0 0 0;
   }
+
   .webDesign i {
     font-size: 2em;
   }
+
   .webHosting i {
     font-size: 2em;
   }
+
   .webSeo i {
     font-size: 2em;
   }
+
   .webDevelopment i {
     font-size: 2em;
   }
+
   .webDesign {
     grid-column: 1 / 5;
     grid-row: 1 / 3;
     padding: 2em 1em 0 1em;
   }
+
   .webDevelopment {
     grid-column: 1 / 5;
     grid-row: 3 / 5;
     padding: 0 1em 0 1em;
   }
+
   .webHosting {
     grid-column: 1 / 5;
     grid-row: 5 / 7;
     padding: 0 1em 0 1em;
   }
+
   .webSeo {
     grid-column: 1 / 5;
     grid-row: 7 / 9;
     padding: 0 1em 0 1em;
   }
+
   /* More info */
+
   .moreInfo {
     grid-column: 1 / 9;
     grid-row: 51 / 60;
-    padding: 3em 1em 0 1em;
+    padding: 1em 1em 0 1em;
   }
+
   #moreInfo h1, p {
     color: #fff;
   }
+
+  .messages {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .clientTimeline {
+    grid-column: 1 / 6;
+    grid-row: 3 / 4;
+    padding: 0;
+  }
+
+  .blogTimeline {
+    grid-column: 1 / 6;
+    grid-row: 2 / 3;
+    padding: 0;
+  }
+
+  .twitter {
+
+    grid-row: 1 / 2;
+    padding: 0;
+    width: 400px;
+  }
+
   .powered {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: 1em;
     font-size: 0.75em;
     padding: 1em;
   }
+
   .poweredBy {
     grid-column: 1 / 5;
     grid-row: 3 / 4;
   }
+
   .powered i {
     padding: 1em 0 0 0;
     font-size: 2em;
   }
+
   .tile1 {
     padding: 1em;
     grid-column: 1 / 2;
     grid-row: 4 / 5;
   }
+
   .tile2 {
     padding: 1em;
     grid-column: 2 / 3;
     grid-row: 4 / 5;
   }
+
   .tile3 {
     padding: 1em;
     grid-column: 3 / 4;
     grid-row: 4 / 5;
   }
+
   .tile4 {
     padding: 1em;
     grid-column: 4 / 5;
     grid-row: 4 / 5;
   }
+
+  .border {
+    height: 208px;
+    width: 400px;
+  }
+
   .twitter {
     grid-column: -1 / -5;
     grid-row: 1 / 3;
     padding: 1em;
   }
+
   .twitter-timeline {
     grid-column: 1 / 5;
     grid-row: 1 / 3;
     padding: 1em;
     background-color: #5A5A5A;
   }
+
   .copy {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -721,32 +921,39 @@ footer {
     grid-column: 1 / 11;
     text-align: center;
   }
+
   .copy i {
     font-size: 2em;
   }
+
   #copyright {
     grid-column: 1 / 7;
     text-align: left;
-    padding: 0 0 0 1em;
+    padding: 1em;
   }
+
   #instagram {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    padding: 0 0 1em 0;
+    padding: 1em;
   }
-  #twitter {
+
+  #twitter2 {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    padding: 0 0 1em 0;
+    padding: 1em;
   }
+
   #linkedin {
     grid-column: 4 / 5;
     grid-row: 2 / 3;
-    padding: 0 0 1em 0;
+    padding: 1em;
   }
+
   #facebook {
     grid-column: 5 / 6;
     grid-row: 2 / 3;
-    padding: 0 0 1em 0;
+    padding: 1em;
   }
+
 }
